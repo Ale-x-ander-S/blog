@@ -12,7 +12,6 @@ export class AuthInterceptor implements HttpInterceptor {
               private router: Router) {
   }
 
-  // @ts-ignore
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (this.auth.isAuthenticated()) {
       req = req.clone({
